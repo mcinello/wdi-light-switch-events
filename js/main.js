@@ -4,10 +4,18 @@ var lightSwitch = document.querySelector('.plate');
 
 lightSwitch.addEventListener('click', function(e) {
   var button = document.querySelector('button');
-  button.className = "switch off"
-  document.body.className = "dark";
-  var h1 = document.querySelector('h1');
-  h1.innerHTML = "Hey, who turned off the lights?"
+  if (button.className === "switch on")
+  {
+    button.className = "switch off"
+    document.body.className = "dark";
+    var h1 = document.querySelector('h1');
+    h1.innerHTML = "Hey, who turned off the lights?"
+  } else {
+    button.className = "switch on"
+    document.body.className = "light";
+    var h1 = document.querySelector('h1');
+    h1.innerHTML = "It's so bright in here!"
+  }
 });
 
 
